@@ -1,157 +1,21 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    background: #f5efe7;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #e0d9cf;
+    flex-direction: column;  /* Stack text above image */
+    align-items: center;     /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    height: 100vh;           /* Make body fill full viewport height */
+    margin: 0;               /* Remove default margins */
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2a3f4d;
+    margin-bottom: 20px; /* Add space between text and image */
+    font-weight: 1000;
+}
+
+img {
+    max-width: 10%; /* Make sure image is responsive */
     height: auto;
-}
-
-.container {
-    width: 90%;
-    max-width: 1100px;
-    background-color: #d4583d;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8), 0 4px 6px rgba(0, 0, 0, 0.8);
-}
-
-.banner {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    background: url('./Book\ Header.jpg') center/cover;
-    border-radius: 12px 12px 0 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-@media (max-width: 768px) {
-    .banner {
-        height: 150px; /* Reduce height for medium screens */
-        background-size: cover;
-    }
-}
-
-@media (max-width: 480px) {
-    .banner {
-        height: 100px; /* Further reduce height for smaller screens */
-        background-size: contain;
-    }
-}
-
-.article-body {
-    padding: 20px;
-    border: 2px solid #d4583d;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.article-body h1 {
-    font-size: 1.8rem;
-    color: #e0d9cf;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.article-body h3 {
-    color: #e0d9cf
-}
-
-.chapter {
-    text-align: center;
-}
-
-
-.article-body p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #e0d9cf;
-    font-weight: 600;
-}
-
-.gear-icon {
-    position: absolute;
-    top: 48px; /* Adjust to position the icon vertically */
-    right: 43%; /* Adjust to position the icon horizontally */
-    width: 10%; /* Adjust size of the icon */
-    height: 60%;
-    background: url('fountainpenicon.png') no-repeat center/contain; /* Replace with your gear icon's path */
-    z-index: 1;
-    animation: writingMotion 2.5s ease-in-out infinite;
-}
-@keyframes writingMotion {
-    0%   { transform: rotate(0deg) translate(0, 0); }
-    20%  { transform: rotate(-5deg) translate(-1px, 1px); }
-    40%  { transform: rotate(3deg) translate(2px, 0); }
-    60%  { transform: rotate(-4deg) translate(-1px, -2px); }
-    80%  { transform: rotate(2deg) translate(1px, 1px); }
-    100% { transform: rotate(0deg) translate(0, 0); }
-  }
-
-.imgright {
-    max-width: 40%;
-    max-height: 50%;
-    margin: 0 15px 15px 0;
-    float: right;
-    border-radius: 12px;
-    padding: 5px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4), 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-.imgleft {
-    max-width: 40%;
-    max-height: 50%;
-    float: left;
-    margin: 0 15px 15px 0;
-    border-radius: 12px;
-    padding: 5px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4), 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-@media (max-width: 768px) {
-    .gear-icon {
-        top: 30px;
-        right: 20px;
-        width: 80px;
-        height: 80px;
-    }
-
-    .article-body h1 {
-        font-size: 1.5rem;
-    }
-
-    .article-body p {
-        font-size: 0.9rem;
-    }
-
-    .imgright, .imgleft {
-        max-width: 100%; /* Images take full width */
-        max-height: auto;
-        float: none; /* Remove float for better stacking */
-        margin: 15px auto;
-        display: block;
-    }
-}
-@media (max-width: 480px) {
-    .gear-icon {
-        top: 20px;
-        right: 10px;
-        width: 60px;
-        height: 60px;
-    }
-
-    .article-body h1 {
-        font-size: 1.2rem;
-    }
-
-    .article-body p {
-        font-size: 0.8rem;
-    }
-}
-.footer {
-    text-align: center;
-    width: 100%;
-    margin-top: 60px;
-    padding: 20px 0;
 }
